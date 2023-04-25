@@ -1,0 +1,66 @@
+.offer-preview{
+    width: 200px;
+    height: 200px;
+}
+
+.offer-price{
+    color: aquamarine;
+    font-size: 20px;
+}
+
+.offers-container{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    max-width: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.open{
+    display: initial!important;
+}
+
+.close{
+    display: none!important;
+}
+
+@media screen and (min-width: 770px) {
+    .offers-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        margin: 5px;
+        max-width: 48%;
+        width: 48%;
+    }
+
+    .image-container {
+        height: 250px;
+        min-width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .offers-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 5px;
+        max-width: 23%;
+        width: 23%;
+    }
+
+    .image-container {
+        height: 209px;
+    }
+}

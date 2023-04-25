@@ -1,0 +1,105 @@
+.nav-block {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(204, 213, 223);
+}
+
+.menu-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.menu-button {
+    margin-left: 20%;
+    font-size: 20px;
+}
+
+.user-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-icon {
+    width: 60px;
+}
+
+.dropdown-item:hover{
+    background-color: rgba(165, 170, 176, .7)!important;
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu-link{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: "Marker Felt";
+}
+
+.dropdown-menu {
+    background-color: rgba(204, 213, 223, .8)!important;
+}
+
+.small-screen-menu{
+    display: none;
+}
+
+.large-screen-menu{
+    display: initial;
+}
+
+.company-name-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Marker Felt";
+    font-size: 30px;
+    padding-top: 10px;
+    text-decoration: underline;
+}
+
+.home-img{
+    display: block;
+}
+
+@media (max-width: 700px) {
+    /*.nav-block {*/
+    /*    flex-direction: column;*/
+    /*}*/
+    .company-name-label{
+        font-size: 20px;
+    }
+
+    .menu-block{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .user-block{
+        flex-direction: column;
+    }
+
+    .home-icon {
+        width: 30px;
+    }
+
+    .small-screen-menu{
+        display: initial;
+    }
+
+    .large-screen-menu{
+        display: none;
+    }
+
+    .nav-small{
+        display: flex;
+        justify-content: space-between;
+    }
+}

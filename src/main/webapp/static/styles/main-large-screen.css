@@ -1,0 +1,59 @@
+.main-img-box{
+    display: grid;
+    height: 100%;
+}
+
+.center-fit{
+    height: auto;
+    max-width: 100%;
+}
+
+.adv-label-container{
+    position: relative;
+    width: 100%;
+    transition: all .4s ease-in-out;
+}
+
+.adv-label{
+    position: absolute;
+    color: black;
+    top: 190px;
+    font-size: 30px;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(204, 213, 223, .7);
+    width: 90%;
+    text-align: center;
+}
+
+.adv-label-container:hover {
+    transform: scale(1.1);
+}
+
+.link-style{
+    text-decoration: none;
+    color: black;
+}
+
+.link-style:hover{
+    color: black;
+}
+
+.offers-block{
+    display: flex;
+    font-size: 20px;
+    background-color: rgba(204, 213, 223);
+    padding: 10px;
+}
+
+@media (max-width: 700px) {
+
+    .adv-label {
+        font-size: 20px;
+    }
+
+    .offers-block {
+        font-size: 15px;
+    }
+}

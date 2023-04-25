@@ -1,0 +1,27 @@
+.img-fluid{
+    height: 300px;
+    width: 250px;
+    object-fit: cover;
+}
+
+.property-value{
+    margin-left: 20px;
+}
+
+.form-select{
+    width: fit-content;
+    margin-right: 20px;
+}
+
+.img-box{
+    padding: 1rem 1rem;
+    width: fit-content;
+}
+
+.down-panel{
+    padding: 1rem 1rem;
+}
+
+.price-cont{
+    width: fit-content;
+}
