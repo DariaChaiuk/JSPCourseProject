@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -10,9 +11,7 @@
 <link rel="stylesheet" href="static/styles/confirmation-email.css">
 <%
     String message = (String) request.getSession().getAttribute("message");
-   // String color = (String) request.getSession().getAttribute("color");
     pageContext.setAttribute("message", message);
-//    pageContext.setAttribute("color", color);
 %>
 <main>
     <div class="contacts-box">

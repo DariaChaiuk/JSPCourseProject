@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -11,11 +12,13 @@
 <main>
     <div class="about-box">
         <div class="p-4 content-box text-light">
-            <div class="text-center fs-2 mb-3">Make you dreams true with us!</div>
-            <div class="w-50 fs-4 mt-3 about-text">We are property agency with a great offers base. Every day we are working find your dream flat for you.
-            We know how comfort and quality are important for our clients, so we have only high level offers. Our specialists
-                are ready to answer all your questions during our working time. You can get acquainted with all our offers on our portal and immediately
-                contact us throw our <a href="./Contacts" class="page-ref">contact</a> page or from any offer directly!
+            <div class="text-center fs-2 mb-3">Реалізуйте свої мрії з нами!</div>
+            <div class="w-50 fs-4 mt-3 about-text">
+                Ми ріелторська агенція з великою базою пропозицій. Кожного дня ми працюємо щоб допомогти вам знайти житло вашої мрії.
+                Ми розуміємо як якість та комфорт важливі для наших клієнтів, тож ми маємо пропозиції тільки найвищої якості.
+                Наші спеціалісти готові відповісти на всі ваші питання протягом нашого робочого часу.
+                Ви можете переглянути усі наші пропозиції на нашому порталі і звʼязатися з нами через нашу сторінку
+                <a href="./Contacts" class="page-ref">контактів</a> або безпосередньо через будь-яку пропозицію!
             </div>
         </div>
         <div>

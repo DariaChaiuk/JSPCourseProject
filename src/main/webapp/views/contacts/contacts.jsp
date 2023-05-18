@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -12,14 +13,14 @@
     <div class="contacts-box">
         <div class="content-box justify-content-between">
             <div class="w-100">
-                <div class="fs-2 text-light text-center mb-4">Stay in touch with us easily!</div>
+                <div class="fs-2 text-light text-center mb-4">Залишайтеся на звʼязку з нами!</div>
                 <div class="d-flex justify-content-around mb-4">
                     <div class="text-light">
-                        <div>Ukraine, Kiev</div>
-                        <div>Khreshchatyk 42</div>
+                        <div>Україна, Київ</div>
+                        <div>Хрещатик 42</div>
                     </div>
                     <div class="text-light">
-                        <div>Find us here!</div>
+                        <div>Звʼяжіться з нами легко!</div>
                         <div>contactcenter@whcompany.com</div>
                     </div>
                 </div>
@@ -28,23 +29,23 @@
                 <form method="post" action="Email">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="name" name="name" required>
-                        <label for="name">Name</label>
+                        <label for="name">Імʼя</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="surname" name="surname" required>
-                        <label for="surname">Surname</label>
+                        <label for="surname">Фамілія</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="email" name="email" required>
-                        <label for="email">Your email address</label>
+                        <label for="email">Ваша поштова адреса</label>
                     </div>
                     <div class="form-floating">
                         <textarea id="message" class="form-control" aria-label="message" name="message" required>
                         </textarea>
-                        <label for="message">Your message</label>
+                        <label for="message">Ваше повідомлення</label>
                     </div>
                     <div class="d-flex justify-content-center mt-3">
-                        <button type="submit" class="btn btn-secondary">Send us email</button>
+                        <button type="submit" class="btn btn-secondary">Надіслати лист</button>
                     </div>
                 </form>
             </div>

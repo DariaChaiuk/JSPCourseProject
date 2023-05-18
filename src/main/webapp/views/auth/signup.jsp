@@ -12,25 +12,25 @@
 <main>
     <div class="login-box">
         <div class="content-box">
-            <h2>Sign up</h2>
+            <h2>Реєстрація</h2>
             <form id="signupForm" action="Auth?page=signup" method="post" class="sign-up-container" onsubmit="return true">
                 <div class="form-group">
-                    <label for="login">Login:</label>
+                    <label for="login">Логін:</label>
                     <input type="text" id="login" name="login" class="form-control" required>
                     <span id="login-err" class="error"></span>
                 </div>
                 <div class="form-group">
-                    <label for="password1">Password:</label>
+                    <label for="password1">Пароль:</label>
                     <input type="password" id="password1" name="password1" class="form-control" required>
                     <span id="password1-err" class="error"></span>
                 </div>
                 <div class="form-group">
-                    <label for="password2">Confirm password:</label>
+                    <label for="password2">Повторення паролю:</label>
                     <input type="password" id="password2" name="password2" class="form-control" required>
                     <span id="password2-err" class="error"></span>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
+                    <label for="email">Поштова адреса:</label>
                     <input type="email" id="email" name="email" class="form-control" required>
                     <span id="email-err" class="error"></span>
                 </div>

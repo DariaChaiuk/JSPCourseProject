@@ -32,27 +32,27 @@ public class EmailServlet extends HttpServlet {
 
         String topic = "Request for offer";
 
-        String html = "<h2 style=\"text-align: center; width: 100%\">You received request for one of your offers!</h2>";
-        html += "<div>Please, connect the sender directly via this email: " + email + "</div>";
-        html += "<div>This customer sent you a message: </div>";
+        String html = "<h2 style=\"text-align: center; width: 100%\">Вам надійшов запит щодо однієї з пропозицій!</h2>";
+        html += "<div>Будь-ласка, зконтактуйте з клієнтом безпосередньо за цим емейлом: " + email + "</div>";
+        html += "<div>Цей користувач надіслав вам наступне повідомлення: </div>";
         html += "<div>" + message + "</div>";
-        html += "<div>Customer name: " + name + " " + surname + ".</div>";
+        html += "<div>Імʼя користувача: " + name + " " + surname + ".</div>";
 
         HttpSession session = request.getSession();
         String resultMessage;
         try{
             EmailService.sendEmail(host, port, user, pass, email, topic, html);
-            resultMessage = "Your message was successfully sent to us!";
+            resultMessage = "Ваше повідомлення успішно відправлено!";
             session.setAttribute("color", "black");
             session.setAttribute("message", resultMessage);
-            PageService.goToPage(request, response, "/views/contacts/confirmation.jsp", "Contact", null);
+            PageService.goToPage(request, response, "/views/contacts/confirmation.jsp", "- Контакти", null);
 
         } catch (Exception ex){
             System.out.println("Messaging Exception - " + ex.getMessage());
-            resultMessage = "Something went wrong in sending process! Please, try again.";
+            resultMessage = "Щось пішло не так в процесі відправки! Будь-ласка, спробуйте ще раз.";
             session.setAttribute("color", "red");
             session.setAttribute("message", resultMessage);
-            PageService.goToPage(request, response, "/views/contacts/confirmation.jsp", "Contact", null);
+            PageService.goToPage(request, response, "/views/contacts/confirmation.jsp", "- Контакти", null);
         }
     }
 }

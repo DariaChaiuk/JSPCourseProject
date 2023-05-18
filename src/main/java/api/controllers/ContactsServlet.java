@@ -11,7 +11,7 @@ import java.io.IOException;
 public class ContactsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PageService.goToPage(request, response, "/views/contacts/contacts.jsp", "Contacts", null);
+        PageService.goToPage(request, response, "/views/contacts/contacts.jsp", "- Контакти", null);
     }
 
     @Override

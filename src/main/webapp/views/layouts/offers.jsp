@@ -1,4 +1,5 @@
 <%@ page import="contracts.models.OfferResponse" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
 <%
@@ -22,7 +23,7 @@
                         <p class="card-text">$
                             <span class="offer-price">
                                 <%=offer.offer.price%>
-                            </span>/month
+                            </span>/місяць
                         </p>
                     </div>
                     <div class="mt-auto">

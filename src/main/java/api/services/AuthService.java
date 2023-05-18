@@ -30,12 +30,12 @@ public class AuthService {
         var formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         var now = LocalDateTime.now();
         var regdate = formatter.format(now);
-        var resultSuccess = usersService.addUser(inputLogin, hashPassword, inputEmail, regdate, 1, 1);
+        var resultSuccess = usersService.addUser(inputLogin, hashPassword, inputEmail, regdate, 2, 1);
 
         String message;
         if(resultSuccess){
-            message = "You was successfully registered!";
-            int roleId = 1;
+            message = "Ви успішно зареєстровані!";
+            int roleId = 2;
             request.getSession().setAttribute("currentUser",
                     new User(1,inputLogin,hashPassword, inputEmail, regdate, roleId, 1, 0));
             Cookie cookie = new Cookie("user", inputLogin);
@@ -45,10 +45,10 @@ public class AuthService {
             cookie.setMaxAge(3600 * 24 * 7);
             response.addCookie(roleCookie);
         } else {
-            message = "Ooops...registration exception";
+            message = "Ой...щось пішло не так в процесі регістрації. Будь-ласка спробуйте ще раз.";
             request.getSession().setAttribute("currentUser", null);
         }
-        PageService.goToAuthResult(request, response, "- Authorization result",
+        PageService.goToAuthResult(request, response, "- Результат авторизації",
                 message,resultSuccess);
     }
 
@@ -60,7 +60,7 @@ public class AuthService {
         var user = usersService.getUser(inputLogin, hashPassword);
         String message;
         if(user!=null){
-            message = "You are successfully authorized!";
+            message = "Ви успішно авторизовані!";
             request.getSession().setAttribute("currentUser", user);
             Cookie cookie = new Cookie("user", inputLogin);
             cookie.setMaxAge(3600 * 24 * 7);
@@ -69,24 +69,24 @@ public class AuthService {
             roleCookie.setMaxAge(3600 * 24 * 7);
             response.addCookie(roleCookie);
         } else {
-            message = "No user with provided credentials";
+            message = "Не знайдено користувача з такими параметрами.";
             request.getSession().setAttribute("currentUser", null);
         }
-        PageService.goToAuthResult(request, response, "- Authorization result",
+        PageService.goToAuthResult(request, response, "- Результат авторизації",
                 message,user!=null);
     }
 
     public void handleSignOut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getSession().removeAttribute("currentUser");
         request.getCookies();
-        String message = "You successfully signed out";
+        String message = "Ви успішно вийшли.";
         Cookie cookie = new Cookie("user", null);
         cookie.setMaxAge(0);
         response.addCookie(cookie);
         Cookie roleCookie = new Cookie("roleId", null);
         roleCookie.setMaxAge(0);
         response.addCookie(roleCookie);
-        PageService.goToAuthResult(request, response, "- Sign out",
+        PageService.goToAuthResult(request, response, "- Вихід",
                 message,true);
     }
     private String getMD5Hash(String initPassword){

@@ -12,15 +12,15 @@
 <main class="">
     <div class="login-box">
         <div class="content-box">
-            <h2>Sign in</h2>
+            <h2>Вхід</h2>
             <form id="signupForm" action="Auth?page=signin" method="post" class="sign-in-container" onsubmit="return true">
                 <div class="form-group">
-                    <label for="login">Login:</label>
+                    <label for="login">Логін:</label>
                     <input type="text" id="login" name="login" class="form-control" required>
                     <span id="login-err" class="error"></span>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password:</label>
+                    <label for="password">Пароль:</label>
                     <input type="password" id="password" name="password" class="form-control" required>
                     <span id="password-err" class="error"></span>
                 </div>

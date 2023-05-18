@@ -63,7 +63,7 @@ public class AdminServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
         request.setAttribute("offers", offers);
-        PageService.goToPage(request, response, "views/admin/admin.jsp", "- Admin", null);
+        PageService.goToPage(request, response, "views/admin/admin.jsp", "- Адмін", null);
     }
 
     @Override

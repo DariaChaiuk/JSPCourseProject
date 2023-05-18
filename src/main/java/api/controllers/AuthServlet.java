@@ -19,16 +19,16 @@ public class AuthServlet extends HttpServlet {
         var page = request.getParameter("page");
         switch (page) {
             case "signup":
-                PageService.goToPage(request, response, "views/auth/signup.jsp", "- Registration", null);
+                PageService.goToPage(request, response, "views/auth/signup.jsp", "- Регістрація", null);
                 break;
             case "signin":
-                PageService.goToPage(request, response, "views/auth/signin.jsp", "- Authorization", null);
+                PageService.goToPage(request, response, "views/auth/signin.jsp", "- Авторизація", null);
                 break;
             case "signout":
                 authService.handleSignOut(request, response);
                 break;
             case "result":
-                PageService.goToPage(request, response, "views/auth/sign-res.jsp", "- Authorization Result", null);
+                PageService.goToPage(request, response, "views/auth/sign-res.jsp", "- Результат логіну", null);
                 break;
         }
     }

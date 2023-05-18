@@ -59,14 +59,14 @@
             <div class="d-flex justify-content-between w-100 align-items-center">
                 <div class="fs-1"><%=offer.offer.title%></div>
                 <div>
-                    <div class="fs-3">Price:</div>
-                    <div><%=offer.offer.price%>$/month</div>
+                    <div class="fs-3">Ціна:</div>
+                    <div><%=offer.offer.price%>$/місяць</div>
                 </div>
             </div>
             <hr/>
             <div class="mb-2 d-flex justify-content-between p-3">
                 <div>
-                    <div class="mb-2">Square:</div>
+                    <div class="mb-2">Площа:</div>
                     <div class="d-flex align-items-center">
                         <div class="me-2">
                             <img src="static/img/area.png" class="icon">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class="mb-2">Location:</div>
+                    <div class="mb-2">Локація:</div>
                     <div class="d-flex align-items-center mb-2">
                         <div class="me-2">
                             <img src="static/img/location.png" class="icon">
@@ -88,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mb-2 ps-2">Balcony:</div>
+            <div class="mb-2 ps-2">Балкон:</div>
             <div class="d-flex align-items-center mb-2 ps-2">
                 <div class="me-2">
                     <img src="static/img/balcony.png" class="icon">
@@ -96,10 +96,10 @@
                 <div>
                     <c:choose>
                         <c:when test="${offer.offer.balcony}">
-                            <div>Yes</div>
+                            <div>Так</div>
                         </c:when>
                         <c:otherwise>
-                            <div>No</div>
+                            <div>Ні</div>
                         </c:otherwise>
                     </c:choose>
                 </div>
@@ -110,7 +110,7 @@
             </div>
             <div class="d-flex justify-content-center align-self-end mt-2">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sendModal">
-                    Connect us
+                    Звʼязатися з нами
                 </button>
 
                 <div class="modal fade" id="sendModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -124,26 +124,26 @@
                                 <form method="post" action="Email" id="requestForm">
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control" id="name" name="name" required>
-                                        <label for="name">Name</label>
+                                        <label for="name">Імʼя</label>
                                     </div>
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control" id="surname" name="surname" required>
-                                        <label for="surname">Surname</label>
+                                        <label for="surname">Прізвище</label>
                                     </div>
                                     <div class="form-floating mb-3">
                                         <input type="email" class="form-control" id="email" name="email" required>
-                                        <label for="email">Your email address</label>
+                                        <label for="email">Ваша поштова адреса</label>
                                     </div>
                                     <div class="form-floating">
                                         <textarea id="message" class="form-control" aria-label="message" name="message" required>
                                         </textarea>
-                                        <label for="message">Your message</label>
+                                        <label for="message">Ваше повідомлення</label>
                                     </div>
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary" form="requestForm">Save changes</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                                <button type="submit" class="btn btn-primary" form="requestForm">Відправити повідомлення</button>
                             </div>
                         </div>
                     </div>

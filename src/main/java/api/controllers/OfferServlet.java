@@ -19,19 +19,23 @@ public class OfferServlet extends HttpServlet {
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html; charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
         String id = request.getParameter("id");
 
         OfferResponse offer = offerService.getOffer(id);
         request.setAttribute("offer", offer);
-        PageService.goToPage(request, response, "/views/offer/offer-details.jsp", "Details", null);
+        PageService.goToPage(request, response, "/views/offer/offer-details.jsp", "Деталі", null);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html; charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
         String id = request.getParameter("id");
 
         OfferResponse offer = offerService.getOffer(id);
         request.setAttribute("offer", offer);
-        PageService.goToPage(request, response, "offer-details.jsp", "Details", null);
+        PageService.goToPage(request, response, "offer-details.jsp", "Деталі", null);
     }
 }

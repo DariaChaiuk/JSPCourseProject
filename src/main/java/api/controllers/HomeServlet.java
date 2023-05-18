@@ -22,6 +22,8 @@ public class HomeServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         List<OfferResponse> offers;
+        response.setContentType("text/html; charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
         try {
             String city = request.getParameter("city");
             String country = request.getParameter("country");

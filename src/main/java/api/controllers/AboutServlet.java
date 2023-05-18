@@ -11,7 +11,7 @@ import java.io.IOException;
 public class AboutServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PageService.goToPage(request, response, "/views/about/about-us.jsp", "About us", null);
+        PageService.goToPage(request, response, "/views/about/about-us.jsp", "- Про нас", null);
     }
 
     @Override

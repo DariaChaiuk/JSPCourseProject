@@ -27,10 +27,10 @@ public class EmailService {
 
         Session session = Session.getInstance(properties, auth);
         Message message = new MimeMessage(session);
-        message.setFrom(new InternetAddress("dchaiuk@gmail.com"));
+        message.setFrom(new InternetAddress("offerRequest@gmail.com"));
         InternetAddress[] addresses = { new InternetAddress(address) };
 
-        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("to@gmail.com"));
+        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("whcompany@gmail.com"));
         message.setSubject(topic);
         message.setSentDate(new Date());
         MimeBodyPart mimeBodyPart = new MimeBodyPart();

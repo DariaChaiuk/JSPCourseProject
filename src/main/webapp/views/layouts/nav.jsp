@@ -40,14 +40,14 @@
         </a>
         <div class="menu-button">
             <button class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Menu
+                Меню
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./">Home</a></li>
-                <li><a class="dropdown-item" href="./Contacts">Contacts</a></li>
-                <li><a class="dropdown-item" href="./About">About us</a></li>
+                <li><a class="dropdown-item" href="./">Головна</a></li>
+                <li><a class="dropdown-item" href="./Contacts">Контакти</a></li>
+                <li><a class="dropdown-item" href="./About">Про нас</a></li>
                 <c:if test="${roleId == 1}">
-                    <li><a class="dropdown-item" href="./Admin">Admin page</a></li>
+                    <li><a class="dropdown-item" href="./Admin">Адміністрування</a></li>
                 </c:if>
             </ul>
         </div>
@@ -63,7 +63,7 @@
             <ul class="dropdown-menu">
                 <li>
                     <span class="dropdown-item">
-                        Hi,
+                        Привіт,
                         <c:if test="${user != null}">
                             <span style="color: darkcyan">
                                 <c:out value="${user}"></c:out>
@@ -71,17 +71,17 @@
                         </c:if>
                         <c:if test="${user == null}">
                             <span style="color: yellow">
-                                Guest!
+                                Гість!
                             </span>
                         </c:if>
                     </span>
                 </li>
                 <c:if test="${user == null}">
-                    <li><a class="dropdown-item" href="Auth?page=signin">Sign in</a></li>
-                    <li><a class="dropdown-item" href="Auth?page=signup">Sign up</a></li>
+                    <li><a class="dropdown-item" href="Auth?page=signin">Вхід</a></li>
+                    <li><a class="dropdown-item" href="Auth?page=signup">Реєстрація</a></li>
                 </c:if>
                 <c:if test="${user != null}">
-                    <li><a class="dropdown-item" href="Auth?page=signout">Sign out</a></li>
+                    <li><a class="dropdown-item" href="Auth?page=signout">Вихід</a></li>
                 </c:if>
             </ul>
         </div>
